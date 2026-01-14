@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Emotion <span class="accent">AI</span></h1>
+            <p>Analyze your emotions through text and typing rhythm.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="typingArea" placeholder="Start typing your thoughts here..."></textarea>
+                <div class="char-count">Provide at least 10 keystrokes for AI analysis.</div>
+            </div>
+
+            <button onclick="sendData()" class="analyze-btn">Analyze Emotion</button>
+
+            <div class="result-card">
+                <h3>Prediction Results</h3>
+                <div id="result" class="emotion-output">Awaiting Input...</div>
+                <div id="methodIndicator" class="method-tag">Status: Idle</div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
