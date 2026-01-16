@@ -72,4 +72,7 @@ def predict():
     return jsonify({"emotion": emotion, "confidence": confidence})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Get the PORT from Render's environment variable, default to 5000 for local testing
+    port = int(os.environ.get("PORT", 5000))
+    # Bind to 0.0.0.0 so the service is accessible externally
+    app.run(host="0.0.0.0", port=port, debug=False)
